@@ -42,25 +42,33 @@ last(items, function(last) {console.log(last)})
 
 // sumNums adds two numbers (x, y) and passes the result to the callback.
 function sumNums(x, y, cb) {
-  return cb()
+  return cb(x + y)
 }
 
-sumNums()
+sumNums(2, 3, function(sumNums) {console.log(sumNums)})
+
 
 // multiplyNums multiplies two numbers and passes the result to the callback.
 function multiplyNums(x, y, cb) {
-
+  return cb(x * y)
 
 }
+
+multiplyNums(3, 7, function(multiplyNums) {console.log(multiplyNums)})
+
 
 // contains checks if an item is present inside of the given array/list.
 // Pass true to the callback if it is, otherwise pass false.
 function contains(item, list, cb) {
+  
+  if(list.includes(item)){
+    cb(true)
+  } else {cb(false)}
 
 }
 
+contains('yo-yo', items, function(contains) {console.log(contains)})
 
-// .includes
 
 /* STRETCH PROBLEM */
 
