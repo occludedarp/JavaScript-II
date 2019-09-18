@@ -1,6 +1,31 @@
 // ==== Challenge 1: Write your own closure ====
 // Write a simple closure of your own creation.  Keep it simple!
+const outside = "It's a beautiful day in the neighborhood"
 
+function house (){
+  console.log("in the heezy")
+
+  function bedroom (){
+    console.log("now I'm getting sleepy")
+
+    function closet (){
+      console.log("now I'm trapped in the closet")
+    }
+    return closet;
+  }
+
+  function garage (){
+    console.log("new whip who dis")
+  }
+
+  function livingRoom(){
+    console.log()
+    function television(){
+      console.log("I thought hurricane season was over!")
+    }
+    return television;
+  }
+}
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
