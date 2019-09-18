@@ -54,7 +54,7 @@ const runners = [{"id":1,"first_name":"Charmain","last_name":"Seiler","email":"c
 {"id":50,"first_name":"Shell","last_name":"Baine","email":"sbaine1d@intel.com","shirt_size":"M","company_name":"Gabtype","donation":171}];
 
 // ==== Challenge 1: Use .forEach() ====
-// The event director nee ds both the first and last names of each runner for their running bibs.  Combine both the first and last names into a new array called fullName. 
+// The event director needs both the first and last names of each runner for their running bibs.  Combine both the first and last names into a new array called fullName. 
 let fullName = [];
 
 function bibNames (runner){
@@ -72,12 +72,12 @@ console.log(fullName);
 let allCaps = [];
 
 function toCaps (runner){
-    allCaps.push(runner.first_name.toUpperCase())
+runner.first_name.toUpperCase()
 }
 
-runners.map(toCaps)
+console.log(runners.map(toCaps));
 
-console.log(allCaps);
+
 
 
 // ==== Challenge 3: Use .filter() ====
@@ -133,12 +133,12 @@ console.log(runnerCompanies);
 
 
 // Problem 3 use .map() to generate a list of each runners initials next to their id number.
-let runnersInitials = [];
+
 
 function makeInitials (runner){
     runnersInitials.push(`${runner.id}: ${runner.first_name.charAt(0)}${runner.last_name.charAt(0)}`)
 }
 
-runners.map(makeInitials)
+let runnersInitials = runners.map(makeInitials)
 
 console.log(runnersInitials);
