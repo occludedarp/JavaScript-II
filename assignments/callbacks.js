@@ -1,6 +1,6 @@
 // Create a higher order function and invoke the callback function to test your work. You have been provided an example of a problem and a solution to see how this works with our items array.  Study both the problem and the solution to figure out the rest of the problems.
 
-const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
+const items = ['Pencil', 'Pencil', 'Notebook', 'yo-yo', 'yo-yo', 'Gum'];
 
 
 
@@ -56,29 +56,21 @@ contains('yo-yo', items, function(contains) {console.log(contains)})
   // Pass the duplicate free array to the callback function.
   // Do not mutate the original array.
 
+/* TECHNIQUE 1*/
+function removeDuplicates(array, cb){
 
-
-
-function removeDuplicates(array, cb) {
-
-// mutatedArr = [];
-
-// this.has = function(item){
-//   return (mutatedArr.indexOf(item) !== -1);
-// }
-
-
-// if([...new Set(array) ]){
-//   cb(true)
-// }
-
+cb(array.filter((item, i) => array.indexOf(item) === i))
 }
+
+removeDuplicates(items, function(removeDuplicates){console.log(removeDuplicates)})
+console.log(items)
+
+/* TECHNIQUE 2*/
+// function removeDuplicates(array, cb){
+//   let seen = {};
+  
+//   cb(array.filter(item => seen.hasOwnProperty(item) ? false : seen[item] = true))
+// }
 
 // removeDuplicates(items, function(removeDuplicates){console.log(removeDuplicates)})
 
-// for ( i = 0; i <array.length; i++){
-// if(mutatedArr.indexOf(array[i]) === -1){
-// mutatedArr.push(items[i])
-// }
-
-// }
